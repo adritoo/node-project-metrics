@@ -1,4 +1,5 @@
 import { UsersHandler, User} from '../users'
+import path = require('path')
 
 const dbUs: UsersHandler = new UsersHandler('./db/users')
 
