@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
 [![HitCount](http://hits.dwyl.io/adritoo/node-metrics.svg)](http://hits.dwyl.io/adritoo/node-metrics)
-[![Coverage Status](https://coveralls.io/repos/github/adritoo/node-metrics/badge.svg?branch=master)](https://coveralls.io/github/adritoo/node-metrics?branch=master)
 
 Simple web API to work on metrics
 
