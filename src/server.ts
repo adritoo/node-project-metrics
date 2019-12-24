@@ -87,6 +87,17 @@ app.post('/new', (req: any, res: any) => {
     console.log("adding")
 });
 
+/* Delete a metric*/
+app.post('/delete', (req: any, res: any) => {
+  dbMet.del("metric:"+req.session.user.name+":"+req.body.time, (err: Error | null, result?:any) => {
+    if (err) throw err
+    res.redirect('/metrics')
+    //res.json(result)
+  });
+
+  console.log("Deleting")
+});
+
 
 
 app.get('/metrics', (req: any, res: any) => {

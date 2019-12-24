@@ -33,9 +33,7 @@ export class MetricsHandler {
   public add(name: string, key: string, value2: number, callback: (error: Error | null, result?: Metric) => void) { // ajouter les métrics d'un id
     const stream = this.db.createReadStream()
     var met: Metric[] = []
-    console.log("Keyyyyy: "+key)
     const [m, k2, timestamp2] = key.split(":");
-    console.log("Tiiiiime: "+timestamp2)
     var metric = new Metric(timestamp2, value2);
   
     stream.on('error', callback)
