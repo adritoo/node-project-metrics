@@ -26,11 +26,17 @@ export class MetricsHandler {
       stream.write({ key: `metric:${key}:${m.timestamp}`, value: m.value })
     })
     stream.end()
+    console.log("value2: "+metrics[metrics.length-1].value)
+
   }
 
-  public add(name: string, key: string, value: number, callback: (error: Error | null, result?: Metric) => void) { // ajouter les métrics d'un id
+  public add(name: string, key: string, value2: number, callback: (error: Error | null, result?: Metric) => void) { // ajouter les métrics d'un id
     const stream = this.db.createReadStream()
     var met: Metric[] = []
+    console.log("Keyyyyy: "+key)
+    const [m, k2, timestamp2] = key.split(":");
+    console.log("Tiiiiime: "+timestamp2)
+    var metric = new Metric(timestamp2, value2);
   
     stream.on('error', callback)
       .on('data', (data: any) => {
@@ -43,18 +49,17 @@ export class MetricsHandler {
         }
       })
       .on('end', (err: Error) => {
-        console.log(key);
-        const [m, k2, timestamp2] = key.split(":");
-        var metric = new Metric(timestamp2, value);
-        met.push(metric);
         callback(null, metric);
       })
       .on("close", () => {
         console.log("Stream ended");
       });
+      met.push(metric);
+      console.log("value: "+met[met.length-1].value);
       this.save(name, met, (err: Error | null) => {
         if (err) throw err
         console.log('Data updated')
+        //res.status(200).send()
       })
   }
   
