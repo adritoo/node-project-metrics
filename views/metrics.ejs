@@ -78,6 +78,20 @@
             <div class="col-sm-6">
               <div class="card">
                 <div class="card-body">
+                  <h5 class="card-title">Modify a metric</h5>
+                  <form action="/modify" method="POST"> 
+                  <div class="form-group">
+                    <input name="time" class="form-control" id="exampleInputPassword1" placeholder="timestamp">
+                    <input name="value" class="form-control" id="exampleInputPassword1" placeholder="value">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
                   <h5 class="card-title">Visualization of Metrics</h5>
                     <canvas id="myChart"></canvas>
                 </div>

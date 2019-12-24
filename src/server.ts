@@ -98,6 +98,16 @@ app.post('/delete', (req: any, res: any) => {
   console.log("Deleting")
 });
 
+/* Modify a metric*/
+app.post('/modify', (req: any, res: any) => {
+    dbMet.add(req.session.user.name, "metric:"+req.session.user.name+":"+req.body.time, req.body.value, (err: Error | null, result?:any) => {
+      if (err) throw err
+      res.redirect('/metrics')
+      //res.json(result)
+    });
+
+    console.log("modifying")
+});
 
 
 app.get('/metrics', (req: any, res: any) => {
