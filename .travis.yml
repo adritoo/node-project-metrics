@@ -2,7 +2,5 @@ language: node_js
 
 node_js:
     - "node"
-before script:
-    - npm run pop
 script:
     - npm run test
