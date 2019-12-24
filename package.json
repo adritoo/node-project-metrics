@@ -9,8 +9,7 @@
     "build": "tsc -p tsconfig.json",
     "dev": "nodemon ",
     "pop": "ts-node bin/populate.ts",
-    "test:coverage": "jest --coverage",
-    "test:coverall" : "jest --coverage --coverageReporters=text-lcov | coveralls"
+    "test:coverall": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "author": "",
   "license": "ISC",
