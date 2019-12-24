@@ -7,7 +7,7 @@ node-metrics contributors
   * Frontend
   * DevOps
 
-* **[Anas Sory]
+* **[Anas Sory]**
 
   * Frontend developper
 
