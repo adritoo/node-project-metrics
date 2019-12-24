@@ -75,11 +75,13 @@ app.post('/delete-metric/:key', (req: any, res: any) => {
 
 /* Add a metric*/
 app.post('/new', (req: any, res: any) => {
-
-    dbMet.add(req.session.user.name, req.session.user.name, req.body.value, (err: Error | null, result?:any) => {
+  
+    console.log("Valeuuuuuur: "+req.body.value)
+    console.log("Noooooom: "+req.session.user.name)
+    dbMet.add(req.session.user.name, "metric:"+req.session.user.name+":"+new Date().getTime(), req.body.value, (err: Error | null, result?:any) => {
       if (err) throw err
       res.redirect('/metrics')
-      res.json(result)
+      //res.json(result)
     });
 
     console.log("adding")

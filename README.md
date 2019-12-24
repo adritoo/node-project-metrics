@@ -1,5 +1,6 @@
 # node-metrics
 
+[![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
 [![HitCount](http://hits.dwyl.io/adritoo/node-metrics.svg)](http://hits.dwyl.io/adritoo/node-metrics)
 
 Simple web API to work on metrics
