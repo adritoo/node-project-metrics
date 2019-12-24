@@ -1,30 +1,27 @@
-# node-metrics
+# ECE Project on NodeJs : metrics & users
 
 [![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
 [![HitCount](http://hits.dwyl.io/adritoo/node-metrics.svg)](http://hits.dwyl.io/adritoo/node-metrics)
 
-Simple web API to work on metrics
+ECE Fall 2019 project from DevOps & NodeJS courses.
 
 ## Features
 
   * Authentication
-  * CRUD users
+  * CRU users
   * CRUD metrics
+  * Display data with chart (Chart.js)
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
+### Before starting
 
 To build and run this app locally you will need Node.js
 
-### Quick start
+### How to start
 
-Clone the repository
+Clone the repository on your computer
 ```bash
-git clone https://github.com/adritoo/node-metrics.git
-cd node-metrics
+git clone https://github.com/adritoo/node-project-metrics.git
+cd node-project-metrics
 ```
 
 Install dependencies
@@ -32,7 +29,7 @@ Install dependencies
 npm install
 ```
 
-Populate database
+Populate database with the script
 ```bash
 npm run pop
 ```
@@ -43,13 +40,14 @@ npm run build
 npm start
 ```
 
-Finally, navigate to `http://localhost:8080` and you should see the project being served and rendered locally.
+Go to `http://localhost:8080` and you should see the project running locally.
 
 ### Run in Docker
 
-This app can also be launched in a Docker container. Go to the directory that has your Dockerfile and run the following command to build the Docker image.
+This app can also be launched in a Docker container.
+Make sure you’re in the directory `node-project-metrics/` in a terminal or powershell, and build your bulletin board image:
 ```bash
-docker build -t node-metrics .
+docker build -t node-project-metrics .
 ```
 
 Running your image with -d runs the container in detached mode, leaving the container running in the background. The -p flag redirects a public port to a private port inside the container. Run the image you previously built:
@@ -57,15 +55,14 @@ Running your image with -d runs the container in detached mode, leaving the cont
 docker run -p 8080:8080 -d node-metrics
 ```
 
-Now open `http://localhost:8080` and you should see the app running locally.
-
+Go to `http://localhost:8080` and you should see the app running locally.
 
 ## Built With
 
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
 * [EJS](https://ejs.co/) - Embedded JavaScript templating
-* [Level](https://github.com/Level/level) - Fast & simple storage
-* [Chart.js](https://www.chartjs.org/docs/latest/) - Simple yet flexible JavaScript charting
+* [Level](https://github.com/Level/level) - Fast key-value storage library by Google
+* [Chart.js](https://www.chartjs.org/docs/latest/) - Simple, clean HTML5 based JavaScript charts
 
 ## Authors
 
@@ -83,11 +80,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 | Method | Route | Description |
 | - | - | - |
 | GET | / | Displays the homepage |
-| GET | /connexion | Displays the login form |
-| POST | /login | Logs the user in |
-| GET | /logout | Signs out the current out |
-| GET | /inscription | Displays the signup form |
-| POST | /signup | Adds a user |
+| GET | /connexion | It displays the login form |
+| POST | /login | It logs the user in |
+| GET | /logout | It signs out the current user |
+| GET | /inscription | It displays the signup form |
+| POST | /signup | It adds a user |
 | GET | /user | Gets the current user |
 | GET | /metrics | Gets all metrics |
 | GET | /metrics/:id | Gets a metric given an id |
