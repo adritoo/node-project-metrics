@@ -171,7 +171,10 @@ app.get('/logout', (req: any, res: any) => {
 })
 
 app.get('/user', (req: any, res: any) => {
-  res.render('user.ejs', {user: req.session.user})
+  dbUs.get(req.session.user.name, (err, user: any) =>{
+    if (err) return res.redirect("/home");
+    res.render('user.ejs', {user: user, mail: user.mail})
+  })
 })
 
 app.post('/update', (req: any, res: any, next: any )=> {
@@ -181,8 +184,9 @@ app.post('/update', (req: any, res: any, next: any )=> {
     user.mail = req.body.mail;
     dbUs.save(user, (err) => {
       if (err) return next(err);
-      res.redirect("/user");
+      //res.redirect("/user");
     });
+    res.redirect("/user");
   });
 
 });
