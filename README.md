@@ -39,9 +39,19 @@ Build and run the project
 npm run build
 npm start
 ```
+<<<<<<< HEAD
 
 Go to `http://localhost:8080` and you should see the project running locally.
+=======
+Finally, navigate to `http://localhost:8080` and you should see the project being served and rendered locally.
+>>>>>>> 4174b7a1a9471f20e685dd7c9ad49691a61bf942
 
+## Running the tests
+
+Run unit tests
+```bash
+npm run test
+```
 ### Run in Docker
 
 This app can also be launched in a Docker container.
