@@ -1,5 +1,7 @@
 # node-metrics
 
+[![HitCount](http://hits.dwyl.io/adritoo/node-metrics.svg)](http://hits.dwyl.io/adritoo/node-metrics)
+
 Simple web API to work on metrics
 
 ## Features
