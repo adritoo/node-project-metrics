@@ -4,7 +4,7 @@
   "description": "The basic Node.js application on TypeScript.",
   "main": "index.js",
   "scripts": {
-    "test": "jshint ./src/server.ts",
+    "test": "./node_modules/.bin/mocha -r ts-node/register src/test/*",
     "start": "ts-node src/server.ts",
     "build": "tsc -p tsconfig.json",
     "dev": "nodemon ",
@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/mocha": "^5.2.7",
     "bcrypt": "^3.0.7",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
@@ -24,6 +25,7 @@
     "level-ws": "^2.0.0",
     "leveldown": "^5.4.1",
     "levelup": "^4.3.2",
+    "mocha": "^6.2.2",
     "passport": "^0.4.1",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
