@@ -1,0 +1,112 @@
+/** le Conteneur qui contient les deux formulaires  **/
+#Conteneur{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;	
+	margin: 0px auto;	
+	width: 500px;
+	position: relative;	
+}
+#Conteneur h1{
+	font-size: 45px;
+	color: rgb(6, 106, 117);
+	padding: 2px 0 10px 0;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#Conteneur p{
+	margin-bottom:20px;
+	
+}
+.container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+.container > header{
+	padding: 20px 30px 10px 30px;
+	margin: 0px 20px 10px 20px;
+}
+.container > header h1{
+	font-size: 40px ;
+	font-weight: 400;
+	color: white;
+}
+.container > header h1 span{
+	color:black;
+	text-shadow: 1px 1px 1px rgba(48, 43, 80, 0.966);}
+/* Css des inputs */
+#Conteneur input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	border: 1px solid rgb(178, 178, 178);
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
+}
+/*Boutons confirmer et connecter */
+#Conteneur p.button input{
+	width: 30%;
+	font-size: 24px;	
+	background: rgb(40, 137, 154);
+	border-radius:12px 0 12px 0;
+	color:#fff;
+	font:bold 12px Verdana;
+	padding:6px 0 6px 0;
+}
+#Conteneur p.button input:hover{
+	background: rgb(74, 179, 198);
+}
+/*Css partie : Vous n'avez pas de compte ? COnnectez vous  */
+p.link{
+	position: absolute;
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 30px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-top: 1px solid rgb(219, 229, 232);
+	background: rgb(225, 234, 235);	
+}
+#Conteneur p.link a {
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	color: rgb(29, 162, 193);
+	border: 1px solid rgb(203, 213, 214);
+}
+#Conteneur p.link a:hover {
+	border: 1px solid rgb(74, 179, 198);
+}
+/** Css des deux formulaires  **/
+#inscription, 
+#login{
+	position: absolute;
+	top: 0px;
+	width: 88%;	
+	padding: 18px 6% 60px 6%;
+	margin: 0 0 35px 0;
+	background: rgb(247, 247, 247);
+	border: 1px solid rgba(147, 184, 189,0.8);	
+}
+/* CSS arrière plan  */
+body{
+	max-width: 100%;
+	background: linear-gradient(to right, #0062E6, #33AEFF);
+	font-weight: 400;
+	font-size: 15px;
+	color: #1d3c41;
+	overflow-y: scroll;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <% include partials/head %>
+  </head>
+  <body class="container">
+    
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Hello <%= name %></h1>
+      <h3>Metrics:</h3>
+      <h5>a) Afficher:</h5>
+      <button class="btn btn-success" id="show-metrics">
+        Bring the metrics
+      </button>
+      <div id="metrics"></div>
+      <h5>b) Supprimer:</h5>
+      <button class="btn btn-success" id="delete-metric">
+        Delete one metric
+      </button>
+      <div id="deleted"></div>
+
+      <h5>c) Ajouter:</h5>
+      <p class="input-group">
+        <form action="/insert-metric" method="POST"> 
+          <input required="required" type="text" class="form-control" placeholder="Enter value" name="value">
+          <p class="signin button">
+            <button class="btn btn-success" id="add-metric">Add a metric</button>
+          </p>
+        </form>
+      </p>
+      <div id="added"></div>
+
+      <h5>d) Modifier:</h5>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Enter timestamp">
+        <input type="text" class="form-control" placeholder="Enter value">
+        <div class="input-group-append">
+          <button class="btn btn-success" id="modify-metric">Modify a metric</button>
+        </div>
+      </div>
+      <div id="modified"></div>
+
+      <h5>e) Graph:</h5>
+      <a href= "../graph" class="to_register">Bring the graph</a>
+      <h3>Infos:</h3>
+      <button class="btn btn-success" id="show-users">
+        Bring the user infos
+      </button>
+      <div id="users"></div>
+    </div>
+    <script>
+      $('#show-metrics').click((e) => {
+        e.preventDefault();
+        $.getJSON("/metrics/<%= name %>", {}, (data) => {
+          const content = data.map(d => { // on récupère un tableau de metrics
+            return '<div>timestamp: '+d.timestamp+', value: '+d.value+'</div>'; // facon dont on veut l'afficher (une string)
+          })
+          const result = content.join(""); // join: returns the array as a string, the elements will be separated by a specified separator
+          $('#metrics').append(result); // append: Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+        });
+      })
+
+      $('#delete-metric').click((e) => {
+        var time;
+        e.preventDefault();
+        $.getJSON("/metrics/<%= name %>", {}, (data) => {
+          const result = '<div>timestamp: '+data[0].timestamp+', value: '+data[0].value+'</div>';
+          var path = '/delete-metric/metric:<%= name %>:'+ data[0].timestamp;
+          $.getJSON(path, {});
+          $('#deleted').append(result); // append: Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+        });
+      })
+
+      /*$('#add-metric').click((e) => { // changer
+        e.preventDefault();
+        value = '16'; // valeur, ici mise par défaut, mais à récupérer la prochaine fois sur l'input
+        time = '1572876000000';
+        const result = '<div>timestamp: '+time+', value: '+value+'</div>';
+        $.getJSON('/insert-metric?key=metric:<%= name %>:'+ time+'&value='+value+'', {}); // erreur: key et value ne passe aucune valeur
+        $('#added').append(result); // append: Insert content, specified by the parameter, to the end of each element in the set of matched elements
+      })*/
+
+      $('#modify-metric').click((e) => { // changer
+        e.preventDefault();
+        $('#modified').append("Metric modified !"); // append: Insert content, specified by the parameter, to the end of each element in the set of matched elements
+      })
+
+      $('#show-users').click((f) => {
+        f.preventDefault();
+        $.getJSON("/users/<%= name %>", {}, (data) => { // getJSON: Load JSON-encoded data from the server using a GET HTTP request.
+          const content =  "name: "+data.name+", mail: "+data.mail+", password: "+data.password+" ";
+          $('#users').append(content);
+        }); 
+      })
+    </script> 
+  </body>
+</html>

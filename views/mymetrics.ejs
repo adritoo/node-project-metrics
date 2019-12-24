@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Projet node JS</title>
+        <link rel="stylesheet" type="text/css" href="css/home.style.css" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+
+    <body >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+            <a class="navbar-brand" href="/home">Node Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+             </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Click Me!
+                </a>
+                <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/user">My Account</a>
+                    <a class="dropdown-item" href="/metrics">Metrics</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/logout">Log Out</a>
+                </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="container text-center">
+        <h1 class="mt-5 text-white font-weight-light">My metrics</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Value</h5>
+                    <p class="card-text"><%- metrics.value %></p>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Timestamp</h5>
+                    <p class="card-text"><%- metrics.timestamp %></p>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Uptade metric</h5>
+                        <form action="/new" method="POST"> 
+                            <div class="form-group">
+                                <input name="value" class="form-control" id="exampleInputPassword1" placeholder="Value">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+          
+
+    </body>
+
+</html>
