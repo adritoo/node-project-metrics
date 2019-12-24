@@ -1,5 +1,5 @@
 FROM node:13
-WORKDIR src/server
+WORKDIR /src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
