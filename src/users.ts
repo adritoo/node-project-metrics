@@ -1,7 +1,6 @@
 import { LevelDB } from "./leveldb"
 import WriteStream from 'level-ws'
 
-const bcryptRegex = /^\$2[ayb]\$.{56}$/;
 
 export class User {
   public name: string
