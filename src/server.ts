@@ -75,13 +75,13 @@ app.post('/delete-metric/:key', (req: any, res: any) => {
 
 /* Add a metric*/
 app.post('/new', (req: any, res: any) => {
-  
+
     dbMet.add(req.session.user.name, req.session.user.name, req.body.value, (err: Error | null, result?:any) => {
       if (err) throw err
       res.redirect('/metrics')
       res.json(result)
     });
-    
+
     console.log("adding")
 });
 
@@ -118,7 +118,7 @@ app.post('/login', (req: any, res: any) => {
       res.redirect('/connexion')
     }
     else{
-      if (req.body.pwd === result.password){      
+      if (req.body.pwd === result.password){
       console.log(result.password)
       req.session.loggedIn = true;
       req.session.user = result;
@@ -161,7 +161,7 @@ app.post('/update', (req: any, res: any, next: any )=> {
       res.redirect("/user");
     });
   });
-  
+
 });
 
 app.listen(port, (err: Error) => {
