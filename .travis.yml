@@ -2,6 +2,8 @@ language: node_js
 
 node_js:
     - "node"
-
+before script:
+    - npm run pop
+    - npm run dev
 script:
-  - npm run test
+    - npm run test
