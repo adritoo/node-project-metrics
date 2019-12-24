@@ -78,7 +78,10 @@ typings/
 # MacOS
 .DS_Store
 
+#Nodemon
 .nodemon.json
+
+# Docker 
 .docker-compose.yml
 
 src_old
