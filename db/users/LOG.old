@@ -1,0 +1,6 @@
+2019/12/24-18:37:23.946 4b00 Recovering log #457
+2019/12/24-18:37:23.946 4b00 Level-0 table #459: started
+2019/12/24-18:37:23.958 4b00 Level-0 table #459: 211 bytes OK
+2019/12/24-18:37:23.965 4b00 Delete type=0 #457
+2019/12/24-18:37:23.965 4b00 Delete type=3 #456
+2019/12/24-18:37:23.966 4f0 Moved #331 to level-1 214 bytes OK: files[ 3 3 0 0 0 0 0 ]
