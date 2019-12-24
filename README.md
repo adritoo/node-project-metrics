@@ -1,7 +1,6 @@
 # ECE Project on NodeJs : metrics & users
 
 [![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
-[![HitCount](http://hits.dwyl.io/adritoo/node-metrics.svg)](http://hits.dwyl.io/adritoo/node-metrics)
 
 ECE Fall 2019 project from DevOps & NodeJS courses.
 
@@ -39,12 +38,8 @@ Build and run the project
 npm run build
 npm start
 ```
-<<<<<<< HEAD
 
 Go to `http://localhost:8080` and you should see the project running locally.
-=======
-Finally, navigate to `http://localhost:8080` and you should see the project being served and rendered locally.
->>>>>>> 4174b7a1a9471f20e685dd7c9ad49691a61bf942
 
 ## Running the tests
 
