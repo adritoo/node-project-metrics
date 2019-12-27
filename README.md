@@ -1,6 +1,7 @@
 # ECE Project on NodeJs : metrics & users
 
 [![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
+[![GitHub license](https://img.shields.io/github/license/adritoo/node-project-metrics)](https://github.com/adritoo/node-project-metrics/blob/master/LICENSE)
 
 ECE Fall 2019 project from DevOps & NodeJS courses.
 
@@ -57,7 +58,7 @@ docker build -t node-project-metrics .
 
 Running your image with -d runs the container in detached mode, leaving the container running in the background. The -p flag redirects a public port to a private port inside the container. Run the image you previously built:
 ```bash
-docker run -p 8080:8080 -d node-metrics
+docker run -p 8080:8080 -d node-project-metrics
 ```
 
 Go to `http://localhost:8080` and you should see the app running locally.
