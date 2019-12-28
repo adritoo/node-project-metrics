@@ -1,6 +1,7 @@
 # ECE Project on NodeJs : metrics & users
 
 [![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
+[![CodeFactor](https://www.codefactor.io/repository/github/adritoo/node-project-metrics/badge/master)](https://www.codefactor.io/repository/github/adritoo/node-project-metrics/overview/master)
 [![GitHub license](https://img.shields.io/github/license/adritoo/node-project-metrics)](https://github.com/adritoo/node-project-metrics/blob/master/LICENSE)
 
 ECE Fall 2019 project from DevOps & NodeJS courses.
