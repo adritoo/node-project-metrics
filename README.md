@@ -1,6 +1,5 @@
 # ECE Project on NodeJs : metrics & users
-
-[![Build Status](https://travis-ci.com/adritoo/node-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-metrics)
+[![Build Status](https://travis-ci.com/adritoo/node-project-metrics.svg?branch=master)](https://travis-ci.com/adritoo/node-project-metrics)
 [![CodeFactor](https://www.codefactor.io/repository/github/adritoo/node-project-metrics/badge/master)](https://www.codefactor.io/repository/github/adritoo/node-project-metrics/overview/master)
 [![GitHub license](https://img.shields.io/github/license/adritoo/node-project-metrics)](https://github.com/adritoo/node-project-metrics/blob/master/LICENSE)
 
